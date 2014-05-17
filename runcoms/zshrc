@@ -11,3 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+source /Users/at/.zshrc.local
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+# no rehash makes it faster
+eval "$(rbenv init - --no-rehash)"
+
+# added by travis gem
+[ -f /Users/at/.travis/travis.sh ] && source /Users/at/.travis/travis.sh
